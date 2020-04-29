@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard/Dashboard'
 import AdDetails from './components/ads/AdDetails'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
+import CreateAd from './components/ads/CreateAd'
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
             <Route path='/ad/:id' component={AdDetails} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
+            <Route path='/create' component={CreateAd} />
           </Switch>
         </div>
       </BrowserRouter>
