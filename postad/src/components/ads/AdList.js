@@ -1,14 +1,14 @@
 import React from 'react'
 import AdSummary from './AdSummary'
 
-const AdList = () => {
+const AdList = ({ads}) => {
   return (
     <div className="project-list section">
-      <AdSummary />
-      <AdSummary />
-      <AdSummary />
-      <AdSummary />
-      
+      { ads && ads.map(ad => {
+        return (
+          <AdSummary ad={ad} key={ad.id} />
+        )
+      })}  
     </div>
   )
 }
