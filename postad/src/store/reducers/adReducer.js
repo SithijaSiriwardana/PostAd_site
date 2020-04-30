@@ -7,6 +7,10 @@ const initState = {
 }
 
 const adReducer = (state = initState, action) => {
+  switch (action.type) {
+    case 'CREATE_AD':
+      console.log('create ad', action.ad);
+  }
   return state;
 };
 

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { createAd } from '../../store/actions/adActions'
 
 class CreateAd extends Component {
   state = {
@@ -12,7 +14,7 @@ class CreateAd extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    this.props.createAd(this.state);
   }
   render() {
     return (
@@ -36,4 +38,10 @@ class CreateAd extends Component {
   }
 }
 
-export default CreateAd
+const mapDispatchToProps = dispatch => {
+  return {
+    createAd: (ad) => dispatch(createAd(ad))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateAd)
