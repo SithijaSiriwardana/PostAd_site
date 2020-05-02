@@ -1,12 +1,15 @@
 import React from 'react'
 import AdSummary from './AdSummary'
+import { Link } from 'react-router-dom'
 
 const AdList = ({ads}) => {
   return (
     <div className="project-list section">
       { ads && ads.map(ad => {
         return (
-          <AdSummary ad={ad} key={ad.id} />
+          <Link to={'/ad/' + ad.id} key={ad.id}>
+            <AdSummary ad={ad} />
+          </Link>
         )
       })}  
     </div>
