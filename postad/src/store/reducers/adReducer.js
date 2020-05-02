@@ -8,10 +8,15 @@ const initState = {
 
 const adReducer = (state = initState, action) => {
   switch (action.type) {
-    case 'CREATE_AD':
-      console.log('create ad', action.ad);
+    case 'CREATE_AD_SUCCESS':
+      console.log('create ad success');
+      return state;
+    case 'CREATE_AD_ERROR':
+      console.log('create ad error');
+      return state;
+    default:
+      return state;
   }
-  return state;
 };
 
 export default adReducer;
