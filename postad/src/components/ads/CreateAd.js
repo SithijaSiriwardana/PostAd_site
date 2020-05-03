@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createAd } from '../../store/actions/adActions'
+import { Redirect } from 'react-router-dom'
 
 class CreateAd extends Component {
   state = {
@@ -17,6 +18,8 @@ class CreateAd extends Component {
     this.props.createAd(this.state);
   }
   render() {
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to='/signin' /> 
     return (
       <div className="container">
         <form className="white" onSubmit={this.handleSubmit}>
@@ -38,10 +41,16 @@ class CreateAd extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     createAd: (ad) => dispatch(createAd(ad))
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateAd)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateAd)
