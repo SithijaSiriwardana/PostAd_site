@@ -2,11 +2,17 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createAd } from '../../store/actions/adActions'
 import { Redirect } from 'react-router-dom'
+import firebase from "firebase";
+import FileUploader from "react-firebase-file-uploader";
 
 class CreateAd extends Component {
   state = {
     title: '',
-    content: ''
+    content: '',
+    avatar: "",
+    isUploading: false,
+    progress: 0,
+    avatarURL: ""
   }
   handleChange = (e) => {
     this.setState({
@@ -17,6 +23,24 @@ class CreateAd extends Component {
     e.preventDefault();
     this.props.createAd(this.state);
   }
+
+handleUploadStart = () => this.setState({ isUploading: true, progress: 0 });
+handleProgress = progress => this.setState({ progress });
+handleUploadError = error => {
+  this.setState({ isUploading: false });
+  console.error(error);
+};
+
+handleUploadSuccess = filename => {
+  this.setState({ avatar: filename, progress: 100, isUploading: false });
+  firebase
+    .storage()
+    .ref("images")
+    .child(filename)
+    .getDownloadURL()
+    .then(url => this.setState({ avatarURL: url }));
+};
+
   render() {
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' /> 
@@ -32,6 +56,18 @@ class CreateAd extends Component {
             <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
             <label htmlFor="content">AdContent</label>
           </div>
+          <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
+            Select your awesome avatar
+            <FileUploader
+              hidden
+              accept="image/*"
+              storageRef={firebase.storage().ref('images')}
+              onUploadStart={this.handleUploadStart}
+              onUploadError={this.handleUploadError}
+              onUploadSuccess={this.handleUploadSuccess}
+              onProgress={this.handleProgress}
+            />
+          </label>
           <div className="input-field">
             <button className="btn pink lighten-1">Create</button>
           </div>
