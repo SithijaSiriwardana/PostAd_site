@@ -8,18 +8,21 @@ const AdDetails = (props) => {
   const { ad } = props;
   if (ad) {
     return (
-      <div className="container section ad-details">
-        <div className="card z-depth-0">
-          <div className="card-content">
-            <span className="card-title">{ad.title}</span>
-            <p>{ad.content}</p>
-          </div>
-          <div className="card-action grey lighten-4 grey-text">
-            <div>Posted by {ad.authorFirstName} {ad.authorLastName}</div>
-            <div>{moment(ad.createdAt.toDate()).calendar()}</div>
-          </div>
+      <div class="row">
+      <div class="col s12 m8">
+      <div class="card">
+        <div class="card-image">
+          <img src={ad.avatarURL}></img>
+          <span class="card-title">{ad.title}</span>
+        </div>
+        <div class="card-content">
+          <p>{ad.content}</p>
+          <p>Posted by The {ad.authorFirstName} {ad.authorLastName}</p>
+          <p className="grey-text">{moment(ad.createdAt.toDate()).calendar()}</p>
         </div>
       </div>
+    </div>
+  </div>
     )
   } else {
     return (
