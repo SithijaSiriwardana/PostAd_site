@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AdList from '../ads/AdList'
+import YourAdList from '../ads/YourAdList'
 // import Notifications from './Notifications'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
@@ -14,7 +14,7 @@ class Dashboard extends Component {
       <div className="dashboard container">
         <div className="row">
           <div className="col s12 m12 l12">
-            <AdList ads={ads} />
+            <YourAdList ads={ads} />
           </div>
           {/* <div className="col s12 m5 offset-m1">
             <Notifications />
