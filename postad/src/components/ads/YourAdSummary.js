@@ -1,8 +1,7 @@
 import React from 'react'
 import moment from 'moment'
-import styles from './card.css'
 
-const AdSummary = ({ad}) => {
+const YourAdSummary = ({ad}) => {
   return(
     <div className="col s12 m12 l3">
       <div className="card small">
@@ -20,4 +19,4 @@ const AdSummary = ({ad}) => {
   )
 }
 
-export default AdSummary
+export default YourAdSummary

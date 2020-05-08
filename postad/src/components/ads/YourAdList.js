@@ -1,16 +1,16 @@
 import React from 'react'
-import AdSummary from './AdSummary'
+import YourAdSummary from './AdSummary'
 import { Link } from 'react-router-dom'
-import styles from './card.css'
 
-const AdList = ({ads}) => {
+
+const YourAdList = ({ads}) => {
   return (
     <div className = "row">
       { ads && ads.map(ad => {
         return (
           
           <Link to={'/ad/' + ad.id} key={ad.id}>
-            <AdSummary ad={ad} />
+            <YourAdSummary ad={ad} />
           </Link>
     
         )
@@ -19,4 +19,4 @@ const AdList = ({ads}) => {
   )
 }
 
-export default AdList
+export default YourAdList

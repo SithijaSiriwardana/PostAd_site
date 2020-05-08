@@ -57,7 +57,7 @@ handleUploadSuccess = filename => {
             <label htmlFor="content">AdContent</label>
           </div>
           <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
-            Select your awesome avatar
+            Select photo
             <FileUploader
               hidden
               accept="image/*"
