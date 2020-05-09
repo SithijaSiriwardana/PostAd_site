@@ -27,13 +27,17 @@ class Dashboard extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    ads: state.firestore.ordered.ads
+    ads: state.firestore.ordered.ads,
+    auth: state.firebase.auth
   }
 }
 
 export default compose(
   connect(mapStateToProps),
-  firestoreConnect([
-    { collection: 'ads', orderBy: ['createdAt', 'desc'] }
-  ])
+  firestoreConnect((props) => { 
+    return ([{ collection: 'ads', orderBy: ['createdAt', 'desc'], where: [["authorId", "==", props.auth.uid]] }]) 
+  })
+//   firestoreConnect([
+//     { collection: 'ads', orderBy: ['createdAt', 'desc'], where: [["authorId", "==", auth.uid]]  }
+//   ])
 )(Dashboard)

@@ -1,7 +1,7 @@
 import React from 'react'
 import AdSummary from './AdSummary'
 import { Link } from 'react-router-dom'
-import styles from './card.css'
+
 
 const AdList = ({ads}) => {
   return (
