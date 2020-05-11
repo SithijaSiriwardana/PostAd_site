@@ -3,11 +3,15 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import moment from 'moment'
+import { useHistory } from 'react-router-dom';
+
 
 const AdDetails = (props) => {
   const { ad } = props;
+  let history = useHistory()
   if (ad) {
     return (
+      // console.log(props.match.params.id),
       <div class="row">
       <div class="col s12 m8">
       <div class="card">
@@ -19,6 +23,10 @@ const AdDetails = (props) => {
           <p>{ad.content}</p>
           <p>Posted by The {ad.authorFirstName} {ad.authorLastName}</p>
           <p className="grey-text">{moment(ad.createdAt.toDate()).calendar()}</p>
+          <div class="col-sm-12 text-right">
+            <button onClick={() => history.push(`/edit/${props.match.params.id}`)}  className="btn btn-default" >Edit</button>
+            <button class="btn btn-primary" id="btn2" name="btn2" value="2" type="submit">Delete</button>
+          </div>
         </div>
       </div>
     </div>
@@ -32,6 +40,8 @@ const AdDetails = (props) => {
     )
   }
 }
+
+
 
 const mapStateToProps = (state, ownProps) => {
   // console.log(state);
