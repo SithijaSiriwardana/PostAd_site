@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const YourAdList = ({ads}) => {
   return (
-    <div className = "row">
+    <div className="project-list section">
       { ads && ads.map(ad => {
         return (
           

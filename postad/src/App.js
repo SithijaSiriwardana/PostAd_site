@@ -7,6 +7,8 @@ import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateAd from './components/ads/CreateAd'
 import YourDashboard from './components/dashboard/YourDashboard'
+import EditAd from './components/ads/EditAd'
+
 
 class App extends Component {
   render() {
@@ -21,6 +23,7 @@ class App extends Component {
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateAd} />
             <Route path='/yourads' component={YourDashboard} />
+            <Route path='/edit/:id' component={EditAd} />
           </Switch>
         </div>
       </BrowserRouter>
