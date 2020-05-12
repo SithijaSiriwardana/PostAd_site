@@ -11,19 +11,19 @@ const AdDetails = (props) => {
   let history = useHistory()
   if (ad) {
     return (
-      <div class="col s12 m12 l6">
+
       <div class="card horizontal">
-        {/* <div class="card-image">
-          <img src="https://lorempixel.com/100/190/nature/6">
-        </div> */}
-        <div class="card-stacked">
-          <div class="card-content">
-            <div className="card-title">
-            <span className="black-text">{ad.title}</span>
-            </div>
-            <p>{ad.content}</p>
-          </div>
-          <div class="card-action">
+      <div class="row no-gutters">
+      <div class="col-md-4">
+          <img class="responsive-img" src={ad.avatarURL}></img>
+      </div>
+        <div class="col-md-8">
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{ad.title}</h5>
+        <p class="card-text">{ad.content}</p>
+        <div class="card-action">
             <p className="black-text">Contact: {ad.authorFirstName} {ad.authorLastName}
             <br/>Phone No: {ad.contactno}
             <br/>Date: {moment(ad.createdAt.toDate()).format('LLL')}
@@ -33,29 +33,12 @@ const AdDetails = (props) => {
                <button class="btn btn-primary" id="btn2" name="btn2" value="2" type="submit">Delete</button>
            </div> : ""}
           </div>
-        </div>
       </div>
     </div>
 
-  //     <div class="row">
-  //     <div class="col s12 m8">
-  //     <div class="card">
-  //       <div class="card-image">
-  //         <img src={ad.avatarURL}></img>
-  //         <span class="card-title">{ad.title}</span>
-  //       </div>
-  //       <div class="card-content">
-  //         <p>{ad.content}</p>
-  //         <p>Posted by The {ad.authorFirstName} {ad.authorLastName}</p>
-  //         <p className="grey-text">{moment(ad.createdAt.toDate()).calendar()}</p>
-  //         <div class="col-sm-12 text-right">
-  //           <button onClick={() => history.push(`/edit/${props.match.params.id}`)}  className="btn btn-default" >Edit</button>
-  //           <button class="btn btn-primary" id="btn2" name="btn2" value="2" type="submit">Delete</button>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // </div>
+        </div>
+        </div>
+      </div>
     )
   } else {
     return (
