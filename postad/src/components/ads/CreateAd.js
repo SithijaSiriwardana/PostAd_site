@@ -12,7 +12,8 @@ class CreateAd extends Component {
     avatar: "",
     isUploading: false,
     progress: 0,
-    avatarURL: ""
+    avatarURL: "",
+    contactno:""
   }
   handleChange = (e) => {
     this.setState({
@@ -55,6 +56,10 @@ handleUploadSuccess = filename => {
           <div className="input-field">
             <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
             <label htmlFor="content">AdContent</label>
+          </div>
+          <div className="input-field">
+            <input type="text" id='contactno' onChange={this.handleChange} />
+            <label htmlFor="title">Contact Number</label>
           </div>
           <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
             Select photo

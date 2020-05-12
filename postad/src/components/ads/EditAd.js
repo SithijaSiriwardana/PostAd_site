@@ -19,6 +19,7 @@ class CreateAd extends Component {
           content: ad.content,
           avatar: ad.avatar,
           avatarURL: ad.avatarURL,
+          contactno: ad.contactno
         });
       } else {
         console.log("No such document!");
@@ -33,7 +34,8 @@ class CreateAd extends Component {
     avatar: "",
     isUploading: false,
     progress: 0,
-    avatarURL: ""
+    avatarURL: "",
+    contactno:""
   }
   
   handleChange = (e) => {
@@ -48,21 +50,23 @@ class CreateAd extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // this.props.createAd(this.state);
-    const { title, content, avatar, avatarURL  } = this.state;
+    const { title, content, avatar, avatarURL,  contactno  } = this.state;
 
     const updateRef = firebase.firestore().collection('ads').doc(this.state.key);
     updateRef.update({
       title,
       content,
       avatar,
-      avatarURL
+      avatarURL,
+      contactno
     }).then((docRef) => {
       this.setState({
         key: '',
         title: '',
         content: '',
         avatar: '',
-        avatarURL:''
+        avatarURL:'',
+        contactno:''
       });
       this.props.history.push("/yourads")
     })
@@ -103,6 +107,10 @@ handleUploadSuccess = filename => {
             <textarea id="content" className="materialize-textarea" value={this.state.content}  onChange={this.handleChange}></textarea>
             <label htmlFor="content"></label>
           </div>
+          <div className="input-field">
+            <textarea id="contactno" className="materialize-textarea" value={this.state.contactno}  onChange={this.handleChange}></textarea>
+            <label htmlFor="contactno"></label>
+          </div>
           <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
             Select photo
             <FileUploader
@@ -116,7 +124,7 @@ handleUploadSuccess = filename => {
             />
           </label>
           <div className="input-field">
-            <button className="btn pink lighten-1">Create</button>
+            <button className="btn pink lighten-1">Update</button>
           </div>
         </form>
       </div>
