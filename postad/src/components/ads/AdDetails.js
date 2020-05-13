@@ -14,10 +14,10 @@ const AdDetails = (props) => {
 
       <div class="card horizontal">
       <div class="row no-gutters">
-      <div class="col-md-4">
+      { ad.avatarURL? <div class="col-md-4">
           <img class="responsive-img" src={ad.avatarURL}></img>
-      </div>
-        <div class="col-md-8">
+      </div>:""}
+        {/* <div class="col-md-8"> */}
 
     <div class="col-md-8">
       <div class="card-body">
@@ -28,7 +28,7 @@ const AdDetails = (props) => {
             <br/>Phone No: {ad.contactno}
             <br/>Date: {moment(ad.createdAt.toDate()).format('LLL')}
             </p>
-            { auth.uid ? <div class="col-sm-12 text-right">
+            { auth.uid==ad.authorId ? <div class="col-sm-12 text-right">
               <button onClick={() => history.push(`/edit/${props.match.params.id}`)}  className="btn btn-default" >Edit</button>
                <button class="btn btn-primary" id="btn2" name="btn2" value="2" type="submit">Delete</button>
            </div> : ""}
@@ -38,7 +38,7 @@ const AdDetails = (props) => {
 
         </div>
         </div>
-      </div>
+      // </div>
     )
   } else {
     return (
