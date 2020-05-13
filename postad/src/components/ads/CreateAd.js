@@ -61,8 +61,17 @@ handleUploadSuccess = filename => {
             <input type="text" id='contactno' onChange={this.handleChange} />
             <label htmlFor="title">Contact Number</label>
           </div>
+
+          
+          { this.state.progress==100? <div class="col-md-4">
+          <img class="responsive-img" src={this.state.avatarURL}></img>
+          </div>:""}
+          <br/>
           <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
-            Select photo
+            Upload a photo
+          
+          {/* {this.state.isUploading && <p>Progress: {this.state.progress}</p>}
+          {this.state.avatarURL && <img src={this.state.avatarURL} />} */}
             <FileUploader
               hidden
               accept="image/*"
@@ -72,7 +81,10 @@ handleUploadSuccess = filename => {
               onUploadSuccess={this.handleUploadSuccess}
               onProgress={this.handleProgress}
             />
-          </label>
+            </label>
+          
+
+
           <div className="input-field">
             <button className="btn pink lighten-1">Create</button>
           </div>

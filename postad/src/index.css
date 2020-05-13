@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url(/img/mm.jpg) no-repeat;
+  background: url(/img/mm.jpg);
   background-size: 100%;
   background-position: bottom;
   background-color: #95e8f3;
