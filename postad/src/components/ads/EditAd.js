@@ -111,8 +111,12 @@ handleUploadSuccess = filename => {
             <textarea id="contactno" className="materialize-textarea" value={this.state.contactno}  onChange={this.handleChange}></textarea>
             <label htmlFor="contactno"></label>
           </div>
+          { this.state.avatarURL? <div class="col-md-4">
+          <img class="responsive-img" src={this.state.avatarURL}></img>
+          </div>:""}
+          <br/>
           <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
-            Select photo
+            update photo
             <FileUploader
               hidden
               accept="image/*"
