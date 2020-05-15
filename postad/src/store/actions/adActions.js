@@ -11,7 +11,7 @@ export const createAd = (ad) => {
       authorId: authorId,
       createdAt: new Date()
     }).then(() => {
-      dispatch({ type: 'CREATE_AD_SUCCESS' });
+      dispatch({ type: 'CREATE_AD_SUCCESS' },window.location.replace("/yourads"));
     }).catch(err => {
       dispatch({ type: 'CREATE_AD_ERROR' }, err);
     });

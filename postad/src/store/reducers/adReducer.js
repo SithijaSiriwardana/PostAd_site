@@ -1,12 +1,7 @@
-import { Redirect } from 'react-router-dom'
-import React, { Component } from 'react'
+
 
 const initState = {
-    ads: [
-        {id: '1', title: 'help me find peach', content: 'blah blah blah'},
-        {id: '2', title: 'collect all the stars', content: 'blah blah blah'},
-        {id: '3', title: 'egg hunt with yoshi', content: 'blah blah blah'}
-      ]
+    ads: []
 }
 
 const adReducer = (state = initState, action) => {
@@ -14,7 +9,7 @@ const adReducer = (state = initState, action) => {
     case 'CREATE_AD_SUCCESS':
       console.log('create ad success');
       alert('create ad success');
-      return <Redirect from ='/create' to='/' /> ;
+      return state;
     case 'CREATE_AD_ERROR':
       console.log('create ad error');
       alert('create ad error');
