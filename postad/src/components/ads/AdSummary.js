@@ -5,8 +5,8 @@ const MAX_LENGTH = 150;
 const AdSummary = ({ad}) => {
   return(
 
-    <div class="col s12 m12 l6">
-    <div class="card horizontal">
+    <div class="col s12 m12 l4">
+    <div class="card horizontal" style={{height:300}}>
       {/* <div class="card-image">
         <img src="https://lorempixel.com/100/190/nature/6">
       </div> */}

@@ -11,13 +11,13 @@ const AdDetails = (props) => {
   let history = useHistory()
   if (ad) {
     return (
-
+      <div className="dashboard container">
       <div class="card horizontal">
       <div class="row no-gutters">
       { ad.avatarURL? <div class="col-md-4">
           <img class="responsive-img" src={ad.avatarURL}></img>
       </div>:""}
-        {/* <div class="col-md-8"> */}
+
 
     <div class="col-md-8">
       <div class="card-body">
@@ -30,7 +30,7 @@ const AdDetails = (props) => {
             </p>
             { auth.uid==ad.authorId ? <div class="col-sm-12 text-right">
               <button onClick={() => history.push(`/edit/${props.match.params.id}`)}  className="btn btn-default" >Edit</button>
-               <button class="btn btn-primary" id="btn2" name="btn2" value="2" type="submit">Delete</button>
+               {/* <button class="btn btn-primary" id="btn2" name="btn2" value="2" type="submit">Delete</button> */}
            </div> : ""}
           </div>
       </div>
@@ -38,7 +38,7 @@ const AdDetails = (props) => {
 
         </div>
         </div>
-      // </div>
+      </div>
     )
   } else {
     return (

@@ -10,7 +10,7 @@ const Navbar = (props) => {
   const links = auth.uid ? <SignInLinks profile={profile} /> : <SignOutLinks />;
   return (
     <nav className="nav-wrapper grey darken-3">
-      <div className="container">
+      <div className="nav-wrapper">
         <Link to='/' className="brand-logo">PostAd</Link>
         {links}
       </div>

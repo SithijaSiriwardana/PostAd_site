@@ -50,15 +50,15 @@ handleUploadSuccess = filename => {
         <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Create a New Ad</h5>
           <div className="input-field">
-            <input type="text" id='title' onChange={this.handleChange} />
+            <input type="text" id='title' onChange={this.handleChange} required/>
             <label htmlFor="title">Ad Title</label>
           </div>
           <div className="input-field">
-            <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
+            <textarea id="content" className="materialize-textarea" onChange={this.handleChange} required></textarea>
             <label htmlFor="content">AdContent</label>
           </div>
           <div className="input-field">
-            <input type="text" id='contactno' onChange={this.handleChange} />
+            <input type="text" id='contactno' onChange={this.handleChange} required/>
             <label htmlFor="title">Contact Number</label>
           </div>
 

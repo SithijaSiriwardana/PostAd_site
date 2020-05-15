@@ -100,15 +100,15 @@ handleUploadSuccess = filename => {
         <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Create a New Ad</h5>
           <div className="input-field">
-            <input type="text" id='title' value={this.state.title} onChange={this.handleChange} />
+            <input type="text" id='title' value={this.state.title} onChange={this.handleChange} required/>
             <label htmlFor="title"></label>
           </div>
           <div className="input-field">
-            <textarea id="content" className="materialize-textarea" value={this.state.content}  onChange={this.handleChange}></textarea>
+            <textarea id="content" className="materialize-textarea" value={this.state.content}  onChange={this.handleChange} required></textarea>
             <label htmlFor="content"></label>
           </div>
           <div className="input-field">
-            <textarea id="contactno" className="materialize-textarea" value={this.state.contactno}  onChange={this.handleChange}></textarea>
+            <textarea id="contactno" className="materialize-textarea" value={this.state.contactno}  onChange={this.handleChange} required></textarea>
             <label htmlFor="contactno"></label>
           </div>
           { this.state.avatarURL? <div class="col-md-4">

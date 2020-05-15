@@ -11,7 +11,7 @@ class Dashboard extends Component {
     const { ads } = this.props;
 
     return (
-      <div className="dashboard container">
+      // <div className="dashboard container">
         <div className="row">
           <div className="col s12 m12 l12">
             <AdList ads={ads} />
@@ -20,7 +20,7 @@ class Dashboard extends Component {
             <Notifications />
           </div> */}
         </div>
-      </div>
+      // </div>
     )
   }
 }
