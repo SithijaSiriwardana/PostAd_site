@@ -11,14 +11,11 @@ class Dashboard extends Component {
     const { ads } = this.props;
 
     return (
-      // <div className="dashboard container">
-        <div className="row">
+      <div className="container">
+        {/* <div className="row"> */}
             <AdList ads={ads} />
-          {/* <div className="col s12 m5 offset-m1">
-            <Notifications />
-          </div> */}
-        </div>
-      // </div>
+        {/* </div> */}
+      </div>
     )
   }
 }
