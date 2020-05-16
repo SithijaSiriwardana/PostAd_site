@@ -15,7 +15,7 @@ const AdDetails = (props) => {
       <div class="card horizontal">
       <div class="row no-gutters">
       { ad.avatarURL? <div class="col-md-4">
-          <img class="responsive-img" src={ad.avatarURL}></img>
+          <img class="card-img" src={ad.avatarURL}></img>
       </div>:""}
 
 
