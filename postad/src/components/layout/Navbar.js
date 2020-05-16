@@ -9,11 +9,22 @@ const Navbar = (props) => {
   // console.log(auth);
   const links = auth.uid ? <SignInLinks profile={profile} /> : <SignOutLinks />;
   return (
-    <nav className="nav-wrapper grey darken-3">
-      <div className="nav-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+      <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block"></span>
+        <Link to='/' class="navbar-brand">PostAd</Link>
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+      </div>
+      {links}
+      {/* <div className="nav-wrapper">
         <Link to='/' className="brand-logo">PostAd</Link>
         {links}
-      </div>
+      </div> */}
     </nav>
   )
 }
