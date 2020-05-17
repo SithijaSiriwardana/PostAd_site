@@ -20,7 +20,9 @@ const Navbar = (props) => {
             </button>
         </div>
       </div>
-      {links}
+      <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+        {links}
+      </div>
       {/* <div className="nav-wrapper">
         <Link to='/' className="brand-logo">PostAd</Link>
         {links}

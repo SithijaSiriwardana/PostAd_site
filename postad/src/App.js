@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import Navbar from './components/layout/Navbar'
+import Nnavbar from './components/layout/Navbar'
 import Dashboard from './components/dashboard/Dashboard'
 import AdDetails from './components/ads/AdDetails'
 import SignIn from './components/auth/SignIn'
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar />
+          <Nnavbar />
           <Switch>
             <Route exact path='/'component={Dashboard} />
             <Route path='/ad/:id' component={AdDetails} />

@@ -5,7 +5,7 @@ import { signOut } from '../../store/actions/authActions'
 
 const SignInLinks = (props) => {
   return (
-    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+    
       <ul class="navbar-nav ml-auto flex-nowrap">
         <li class="nav-item"><NavLink to='/create'>New Ad</NavLink></li>
         <li class="nav-item"><NavLink to='/yourads'>Your ads</NavLink></li>
@@ -14,7 +14,7 @@ const SignInLinks = (props) => {
         {props.profile.initials}  
         </NavLink></li>
       </ul>
-    </div>
+    
   )
 }
 

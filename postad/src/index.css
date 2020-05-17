@@ -42,3 +42,13 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label{
   object-fit: cover;
   height: 300px; /* only if you want fixed height */
   }
+
+  @media (min-width: 768px) {
+    .navbar-brand.abs
+        {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+    }
