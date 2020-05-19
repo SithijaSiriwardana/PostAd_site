@@ -4,8 +4,34 @@ import { createAd } from '../../store/actions/adActions'
 import { Redirect } from 'react-router-dom'
 import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
+import Select from 'react-select';
+
+const options = [
+  { label: 'Brides', value: 'Brides' },
+  { label: "Grooms", value: "Grooms" },
+  { label: "Partners", value: "Partners" },
+  { label: "Land Colombo", value: "Land Colombo" },
+  { label: "Land Other", value: "Land Other" },
+  { label: "Property Colombo", value: "Property Colombo"},
+  { label: "Property Other", value: "Property Other"},
+  { label: "Investors Local", value: "Investors Local"},
+  { label: "Investors Foreign", value: "Investors Foreign"},
+  { label: "Buy and Sell", value: "Buy and Sell"},
+  { label: "Services", value: "Services"},
+  { label: "Jobs", value: "Jobs"},
+  { label: "Businesses", value: "Businesses"},
+  { label: "Accomodation Colombo", value: "Accomodation Colombo"},
+  { label: "Accomodation Other", value: "Accomodation Other"},
+  { label: "Travel and Tourism", value: "Travel and Tourism"},
+  { label: "Vehicles", value: "Vehicles"},
+  { label: "Education", value: "Education"},
+  { label: "Import", value: "Import"},
+  { label: "Export", value: "Export"},
+];
 
 class CreateAd extends Component {
+
+
   state = {
     title: '',
     content: '',
@@ -13,8 +39,17 @@ class CreateAd extends Component {
     isUploading: false,
     progress: 0,
     avatarURL: "",
-    contactno:""
+    contactno:"",
+    adCategory:"",
+    ad:""
   }
+
+  handleadChange = ad => {
+    this.setState({ ad});
+    const adCategory = ad.value;
+    this.setState({ adCategory});
+    console.log(`Option selected:`, ad.value);
+  };
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -43,6 +78,7 @@ handleUploadSuccess = filename => {
 };
 
   render() {
+    const { ad } = this.state;
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' /> 
     return (
@@ -57,11 +93,14 @@ handleUploadSuccess = filename => {
             <textarea id="content" className="materialize-textarea" onChange={this.handleChange} required></textarea>
             <label htmlFor="content">AdContent</label>
           </div>
+          <label htmlFor="content">Select Ad categorty</label>
+          <Select value={ad} options={options} onChange={this.handleadChange}/>
+
+          <br/>
           <div className="input-field">
             <input type="text" id='contactno' onChange={this.handleChange} required/>
             <label htmlFor="title">Contact Number</label>
           </div>
-
           
           { this.state.progress==100? <div class="col-md-4">
           <img class="responsive-img" src={this.state.avatarURL}></img>
