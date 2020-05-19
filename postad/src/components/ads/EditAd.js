@@ -4,6 +4,30 @@ import { createAd } from '../../store/actions/adActions'
 import { Redirect } from 'react-router-dom'
 import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
+import Select from 'react-select';
+
+const options = [
+  { label: 'Brides', value: 'Brides' },
+  { label: "Grooms", value: "Grooms" },
+  { label: "Partners", value: "Partners" },
+  { label: "Land Colombo", value: "Land Colombo" },
+  { label: "Land Other", value: "Land Other" },
+  { label: "Property Colombo", value: "Property Colombo"},
+  { label: "Property Other", value: "Property Other"},
+  { label: "Investors Local", value: "Investors Local"},
+  { label: "Investors Foreign", value: "Investors Foreign"},
+  { label: "Buy and Sell", value: "Buy and Sell"},
+  { label: "Services", value: "Services"},
+  { label: "Jobs", value: "Jobs"},
+  { label: "Businesses", value: "Businesses"},
+  { label: "Accomodation Colombo", value: "Accomodation Colombo"},
+  { label: "Accomodation Other", value: "Accomodation Other"},
+  { label: "Travel and Tourism", value: "Travel and Tourism"},
+  { label: "Vehicles", value: "Vehicles"},
+  { label: "Education", value: "Education"},
+  { label: "Import", value: "Import"},
+  { label: "Export", value: "Export"},
+];
 
 class CreateAd extends Component {
 
@@ -19,7 +43,8 @@ class CreateAd extends Component {
           content: ad.content,
           avatar: ad.avatar,
           avatarURL: ad.avatarURL,
-          contactno: ad.contactno
+          contactno: ad.contactno,
+          adCategory: ad.adCategory
         });
       } else {
         console.log("No such document!");
@@ -35,8 +60,17 @@ class CreateAd extends Component {
     isUploading: false,
     progress: 0,
     avatarURL: "",
-    contactno:""
+    contactno:"",
+    adCategory:"",
+    ad:""
   }
+
+  handleadChange = ad => {
+    this.setState({ ad});
+    const adCategory = ad.value;
+    this.setState({ adCategory});
+    console.log(`Option selected:`, ad.value);
+  };
   
   handleChange = (e) => {
     // const state = this.state
@@ -50,7 +84,7 @@ class CreateAd extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // this.props.createAd(this.state);
-    const { title, content, avatar, avatarURL,  contactno  } = this.state;
+    const { title, content, avatar, avatarURL,  contactno,  adCategory, ad} = this.state;
 
     const updateRef = firebase.firestore().collection('ads').doc(this.state.key);
     updateRef.update({
@@ -58,7 +92,9 @@ class CreateAd extends Component {
       content,
       avatar,
       avatarURL,
-      contactno
+      contactno,
+      adCategory,
+      ad
     }).then((docRef) => {
       this.setState({
         key: '',
@@ -66,7 +102,9 @@ class CreateAd extends Component {
         content: '',
         avatar: '',
         avatarURL:'',
-        contactno:''
+        contactno:'',
+        adCategory:'',
+        ad:''
       });
       this.props.history.push("/yourads")
     })
@@ -94,6 +132,7 @@ handleUploadSuccess = filename => {
 
   render() {
     const { auth } = this.props;
+    const { ad } = this.state;
     if (!auth.uid) return <Redirect to='/signin' /> 
     return (
       <div className="container">
@@ -107,6 +146,10 @@ handleUploadSuccess = filename => {
             <textarea id="content" className="materialize-textarea" value={this.state.content}  onChange={this.handleChange} required></textarea>
             <label htmlFor="content"></label>
           </div>
+          <label htmlFor="content">Select Ad categorty</label>
+          <Select value={ad} options={options} onChange={this.handleadChange}/>
+
+          <br/>
           <div className="input-field">
             <textarea id="contactno" className="materialize-textarea" value={this.state.contactno}  onChange={this.handleChange} required></textarea>
             <label htmlFor="contactno"></label>
