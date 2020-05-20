@@ -20,7 +20,20 @@ const Nnavbar = (props) => {
             {links}
           </Collapse>
         </Navbar>
-      </div>
+
+    { auth.uid ? "": <div class="jumbotron">
+    <div class="container">
+    <a href="/"><img src="/images/logo.png" alt="Lanka Ads Logo" class="logo"/></a>
+    <p>Welcome to best &amp; fastest Sri Lankan Ad website. Advertise your products and services with us quickly. No Registration/Sign up, Immediate approval without any restrictions.</p>
+    <p>
+    We are the fastest growing online Ad network in Sri Lanka. The most popular site between young &amp; adults.
+    <a class="btn btn-info" href="/postAd.php">Post Your Ad on our site and see amazing results.</a>
+    </p>
+    </div>
+    </div>}
+    </div> 
+
+      
 
     // <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
