@@ -13,6 +13,7 @@ import fbConfig from './config/fbConfig';
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const store = createStore(rootReducer,
   compose(

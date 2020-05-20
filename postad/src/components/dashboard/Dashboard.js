@@ -12,9 +12,21 @@ class Dashboard extends Component {
 
     return (
       <div className="container">
-        {/* <div className="row"> */}
+        <div class="row content">
+          <div class="col-md-2">
+          <div class="list-group">
+          <a href="/Automobiles/" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Automobiles (1)</a>
+          <a href="/Business/" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Business (79)</a>
+          <a href="/Electronics/" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Electronics (0)</a>
+          <a href="/Employment/" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Employment (23)</a>
+          <div align="center" class="left-add">
+          </div>
+          </div>
+          </div>
+          <div class="col-md-10 ad-count">
             <AdList ads={ads} />
-        {/* </div> */}
+          </div>
+        </div>
       </div>
     )
   }
