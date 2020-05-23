@@ -17,7 +17,7 @@ import PropertyColomboAds from './components/ads/adCategories/PropertyColomboAds
 import PropertyOtherAds from './components/ads/adCategories/PropertyOtherAds';
 import InvestorsLocalAds from './components/ads/adCategories/InvestorsLocalAds';
 import InvestorsForeignAds from './components/ads/adCategories/InvestorsForeignAds';
-import BuyandSellAds from './components/ads/adCategories/BuyandSellAds';
+import BuyAndSellAds from './components/ads/adCategories/BuyAndSellAds';
 import ServicesAds from './components/ads/adCategories/ServicesAds';
 import JobsAds from './components/ads/adCategories/JobsAds';
 import BusinessesAds from './components/ads/adCategories/BusinessesAds';
@@ -51,7 +51,7 @@ class App extends Component {
             <Route path='/Property Other' component={PropertyOtherAds} />
             <Route path='/Investors Local' component={InvestorsLocalAds} />
             <Route path='/Investors Foreign ' component={InvestorsForeignAds} />
-            <Route path='/Buy and Sell' component={BuyandSellAds} />
+            <Route path='/Buy and Sell' component={BuyAndSellAds} />
             <Route path='/Services' component={ServicesAds} />
             <Route path='/Jobs' component={JobsAds} />
             <Route path='/Businesses' component={BusinessesAds} />
