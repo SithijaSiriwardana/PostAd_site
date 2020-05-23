@@ -10,7 +10,21 @@ import YourDashboard from './components/dashboard/YourDashboard'
 import EditAd from './components/ads/EditAd'
 import BridesAds from './components/ads/BridesAds';
 import GroomsAds from './components/ads/GroomsAds';
-
+import PartnersAds from './components/ads/PartnersAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
+import GroomsAds from './components/ads/GroomsAds';
 
 class App extends Component {
   render() {
@@ -27,6 +41,21 @@ class App extends Component {
             <Route path='/yourads' component={YourDashboard} />
             <Route path='/Brides' component={BridesAds} />
             <Route path='/Grooms' component={GroomsAds} />
+            <Route path='/Partners' component={PartnersAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
             <Route path='/edit/:id' component={EditAd} />
           </Switch>
         </div>
