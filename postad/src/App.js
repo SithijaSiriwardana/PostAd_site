@@ -8,26 +8,26 @@ import SignUp from './components/auth/SignUp'
 import CreateAd from './components/ads/CreateAd'
 import YourDashboard from './components/dashboard/YourDashboard'
 import EditAd from './components/ads/EditAd'
-import BridesAds from './components/ads/BridesAds';
-import GroomsAds from './components/ads/GroomsAds';
-import PartnersAds from './components/ads/PartnersAds';
-import LandColomboAds from './components/ads/LandColomboAds';
-import LandOtherAds from './components/ads/LandOtherAds';
-import PropertyColomboAds from './components/ads/PropertyColomboAds';
-import PropertyOtherAds from './components/ads/PropertyOtherAds';
-import InvestorsLocalAds from './components/ads/InvestorsLocalAds';
-import InvestorsForeignAds from './components/ads/InvestorsForeignAds';
-import BuyandSellAds from './components/ads/BuyandSellAds';
-import ServicesAds from './components/ads/ServicesAds';
-import JobsAds from './components/ads/JobsAds';
-import BusinessesAds from './components/ads/BusinessesAds';
-import AccomodationColomboAds from './components/ads/AccomodationColomboAds';
-import AccomodationOtherAds from './components/ads/AccomodationOtherAds';
-import TravelandTourismAds from './components/ads/TravelandTourismAds';
-import VehiclesAds from './components/ads/VehiclesAds';
-import EducationAds from './components/ads/EducationAds';
-import ImportAds from './components/ads/ImportAds';
-import ExportAds from './components/ads/ExportAds';
+import BridesAds from './components/ads/adCategories/BridesAds';
+import GroomsAds from './components/ads/adCategories/GroomsAds';
+import PartnersAds from './components/ads/adCategories/PartnersAds';
+import LandColomboAds from './components/ads/adCategories/LandColomboAds';
+import LandOtherAds from './components/ads/adCategories/LandOtherAds';
+import PropertyColomboAds from './components/ads/adCategories/PropertyColomboAds';
+import PropertyOtherAds from './components/ads/adCategories/PropertyOtherAds';
+import InvestorsLocalAds from './components/ads/adCategories/InvestorsLocalAds';
+import InvestorsForeignAds from './components/ads/adCategories/InvestorsForeignAds';
+import BuyandSellAds from './components/ads/adCategories/BuyandSellAds';
+import ServicesAds from './components/ads/adCategories/ServicesAds';
+import JobsAds from './components/ads/adCategories/JobsAds';
+import BusinessesAds from './components/ads/adCategories/BusinessesAds';
+import AccomodationColomboAds from './components/ads/adCategories/AccomodationColomboAds';
+import AccomodationOtherAds from './components/ads/adCategories/AccomodationOtherAds';
+import TravelandTourismAds from './components/ads/adCategories/TravelandTourismAds';
+import VehiclesAds from './components/ads/adCategories/VehiclesAds';
+import EducationAds from './components/ads/adCategories/EducationAds';
+import ImportAds from './components/ads/adCategories/ImportAds';
+import ExportAds from './components/ads/adCategories/ExportAds';
 
 class App extends Component {
   render() {

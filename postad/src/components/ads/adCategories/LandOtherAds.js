@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AdList from '../ads/AdList'
+import AdList from '../AdList'
 // import Notifications from './Notifications'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
