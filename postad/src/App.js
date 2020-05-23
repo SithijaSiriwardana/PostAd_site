@@ -9,6 +9,7 @@ import CreateAd from './components/ads/CreateAd'
 import YourDashboard from './components/dashboard/YourDashboard'
 import EditAd from './components/ads/EditAd'
 import BridesAds from './components/ads/BridesAds';
+import GroomsAds from './components/ads/GroomsAds';
 
 
 class App extends Component {
@@ -24,7 +25,8 @@ class App extends Component {
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateAd} />
             <Route path='/yourads' component={YourDashboard} />
-            <Route path='/brides' component={BridesAds} />
+            <Route path='/Brides' component={BridesAds} />
+            <Route path='/Grooms' component={GroomsAds} />
             <Route path='/edit/:id' component={EditAd} />
           </Switch>
         </div>

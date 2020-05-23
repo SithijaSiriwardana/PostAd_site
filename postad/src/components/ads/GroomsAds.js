@@ -56,8 +56,8 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-  connect(mapStateToProps),
-  firestoreConnect([
-    { collection: 'ads', orderBy: ['createdAt', 'desc'] }
-  ])
-)(Dashboard)
+    connect(mapStateToProps),
+    firestoreConnect((props) => { 
+      return ([{ collection: 'ads', orderBy: ['createdAt', 'desc'], where: [["adCategory", "==", "Grooms"]] }]) 
+    })
+  )(Dashboard)
