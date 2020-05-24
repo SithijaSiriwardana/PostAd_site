@@ -14,7 +14,7 @@ const Nnavbar = (props) => {
 
     <div>
         <Navbar color="light" light expand="lg">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">Post Ad</NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} />
           <Collapse isOpen={!collapsed} navbar>
             {links}
