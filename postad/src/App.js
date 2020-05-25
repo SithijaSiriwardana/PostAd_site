@@ -28,6 +28,7 @@ import VehiclesAds from './components/ads/adCategories/VehiclesAds';
 import EducationAds from './components/ads/adCategories/EducationAds';
 import ImportAds from './components/ads/adCategories/ImportAds';
 import ExportAds from './components/ads/adCategories/ExportAds';
+import Image from './components/ads/Image';
 
 class App extends Component {
   render() {
@@ -62,6 +63,7 @@ class App extends Component {
             <Route path='/Education' component={EducationAds} />
             <Route path='/Import' component={ImportAds} />
             <Route path='/Export' component={ExportAds} />
+            <Route path='/image' component={Image} />
             <Route path='/edit/:id' component={EditAd} />
           </Switch>
         </div>
