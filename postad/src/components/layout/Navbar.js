@@ -23,11 +23,10 @@ const Nnavbar = (props) => {
 
     { auth.uid ? "": <div class="jumbotron">
     <div class="container">
-    <a href="/"><img src="/images/logo.png" alt="Lanka Ads Logo" class="logo"/></a>
-    <p>Welcome to best &amp; fastest Sri Lankan Ad website. Advertise your products and services with us quickly. No Registration/Sign up, Immediate approval without any restrictions.</p>
+    {/* <a href="/"><img src="/images/logo.png" alt="Lanka Ads Logo" class="logo"/></a> */}
+    <p>Welcome to best &amp; fastest Sri Lankan Ad website.Sign up to post ur ad.</p>
     <p>
-    We are the fastest growing online Ad network in Sri Lanka. The most popular site between young &amp; adults.
-    <a class="btn btn-info" href="/postAd.php">Post Your Ad on our site and see amazing results.</a>
+    <a class="btn btn-info" href="/signup">Post Your Ad</a>
     </p>
     </div>
     </div>}
