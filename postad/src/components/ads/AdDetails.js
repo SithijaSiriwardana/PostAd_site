@@ -4,11 +4,12 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import moment from 'moment'
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 
 const AdDetails = (props) => {
   const { ad, auth } = props;
-  let history = useHistory()
+  // let history = useHistory()
   if (ad) {
     return (
       <div className="dashboard container">
@@ -29,7 +30,7 @@ const AdDetails = (props) => {
             <br/>Date: {moment(ad.createdAt.toDate()).format('LLL')}
             </p>
             { auth.uid==ad.authorId ? <div class="col-sm-12 text-right">
-              <button onClick={() => history.push(`/edit/${props.match.params.id}`)}  className="btn btn-default" >Edit</button>
+            <Link to={'/edit/' + props.match.params.id} key={props.match.params.id}><button  className="btn btn-default" >Edit</button></Link>
                {/* <button class="btn btn-primary" id="btn2" name="btn2" value="2" type="submit">Delete</button> */}
            </div> : ""}
           </div>
