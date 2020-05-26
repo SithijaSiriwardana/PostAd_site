@@ -42,3 +42,13 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label{
   object-fit: cover;
   height: 300px; /* only if you want fixed height */
   }
+
+  .sidenav {
+    background-color: #e6f3ff;
+ 
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
