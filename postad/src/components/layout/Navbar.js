@@ -13,8 +13,8 @@ const Nnavbar = (props) => {
   return (
 
     <div>
-        <Navbar color="light" light expand="lg">
-          <NavbarBrand href="/">Post Ad</NavbarBrand>
+        <Navbar color="dark" light expand="lg">
+          <NavbarBrand href="/"><h3 style={{color : 'white'}}>Post Ad</h3></NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} />
           <Collapse isOpen={!collapsed} navbar>
             {links}
