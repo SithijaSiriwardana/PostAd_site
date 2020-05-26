@@ -103,7 +103,7 @@ handleUploadSuccess = filename => {
           </div>
           
           { this.state.progress==100? <div class="col-md-4">
-          <img class="responsive-img" src={this.state.avatarURL}></img>
+          <img src={this.state.avatarURL}></img>
           </div>:""}
           <br/>
           <label style={{backgroundColor: 'steelblue', color: 'white', padding: 10, borderRadius: 4, pointer: 'cursor'}}>
