@@ -5,10 +5,10 @@ const SignOutLinks = () => {
   return (
     <Nav className="ml-auto" navbar>
     <NavItem>
-        <NavLink href="/signup">Signup</NavLink>
+        <NavLink href="/signup" style={{color:'white'}}>Signup</NavLink>
     </NavItem>
     <NavItem>
-        <NavLink href="/signin">Login</NavLink>
+        <NavLink href="/signin" style={{color:'white'}}>Login</NavLink>
     </NavItem>
     </Nav>
     // <div>

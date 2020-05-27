@@ -7,10 +7,10 @@ const SignInLinks = (props) => {
   return (
     
       <ul class="navbar-nav ml-auto flex-nowrap">
-        <li class="nav-item"><NavLink to='/create'>New Ad</NavLink></li>
-        <li class="nav-item"><NavLink to='/yourads'>Your ads</NavLink></li>
-        <li class="nav-item"><a onClick={props.signOut}>Log Out</a></li>
-        <li class="nav-item"><NavLink to='/' className="btn btn-floating pink lighten-1">
+        <li class="nav-item" style={{color:'white'}}><NavLink to='/create'>New Ad</NavLink></li>
+        <li class="nav-item" style={{color:'white'}}><NavLink to='/yourads'>Your ads</NavLink></li>
+        <li class="nav-item" style={{color:'white'}}><a onClick={props.signOut}>Log Out</a></li>
+        <li class="nav-item" style={{color:'white'}}><NavLink to='/' className="btn btn-floating pink lighten-1">
         {props.profile.initials}  
         </NavLink></li>
       </ul>
