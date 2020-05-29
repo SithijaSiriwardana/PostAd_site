@@ -19,7 +19,7 @@ class Dashboard extends Component {
           <a href="/Brides" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Brides </a>
           <a href="/Grooms" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Grooms </a>
           <a href="/Partners" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Partners </a>
-          <a href="/Land Colombo" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Land Colombo (23)</a>
+          <a href="/Land Colombo" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Land Colombo</a>
           <a href="/Land Other" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Land Other</a>
           <a href="/Property Colombo" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Property Colombo </a>
           <a href="/Property Other" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Property Other </a>
