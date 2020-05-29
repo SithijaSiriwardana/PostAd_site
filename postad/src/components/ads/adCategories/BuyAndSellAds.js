@@ -15,27 +15,27 @@ class Dashboard extends Component {
         <div class="row content">
           <div class="col-md-2">
             <br/>
-          <div class="list-group">
-          <a href="/Brides" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Brides (1)</a>
-          <a href="/Grooms" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Grooms (79)</a>
-          <a href="/Partners" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Partners (0)</a>
-          <a href="/Land Colombo" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Land Colombo (23)</a>
-          <a href="/Land Other" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Land Other(1)</a>
-          <a href="/Property Colombo" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Property Colombo (79)</a>
-          <a href="/Property Other" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Property Other (0)</a>
-          <a href="/Investors Local" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Investors Local (23)</a>
-          <a href="/Investors Foreign" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Investors Foreign (1)</a>
-          <a href="/Buy and Sell" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Buy and Sell (79)</a>
-          <a href="/Services" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Services (0)</a>
-          <a href="/Jobs" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Jobs (23)</a>
-          <a href="/Businesses" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Businesses(1)</a>
-          <a href="/Accomodation Colombo" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Accomodation Colombo(79)</a>
-          <a href="/Accomodation Other" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Accomodation Other(0)</a>
-          <a href="/Travel and Tourism" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Travel and Tourism(23)</a>
-          <a href="/Vehicles" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Vehicles(1)</a>
-          <a href="/Education" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Education(79)</a>
-          <a href="/Import" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Import (0)</a>
-          <a href="/Export" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Export (23)</a>
+            <div class="list-group">
+          <a href="/Brides" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Brides </a>
+          <a href="/Grooms" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Grooms </a>
+          <a href="/Partners" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Partners </a>
+          <a href="/Land Colombo" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Land Colombo</a>
+          <a href="/Land Other" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Land Other</a>
+          <a href="/Property Colombo" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Property Colombo </a>
+          <a href="/Property Other" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Property Other </a>
+          <a href="/Investors Local" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Investors Local</a>
+          <a href="/Investors Foreign" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Investors Foreign </a>
+          <a href="/Buy and Sell" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Buy and Sell </a>
+          <a href="/Services" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Services </a>
+          <a href="/Jobs" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Jobs </a>
+          <a href="/Businesses" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Businesses</a>
+          <a href="/Accomodation Colombo" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Accomodation Colombo</a>
+          <a href="/Accomodation Other" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Accomodation Other</a>
+          <a href="/Travel and Tourism" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Travel and Tourism</a>
+          <a href="/Vehicles" title="Automobiles ads" class="list-group-item"><i class="fa fa-fw fa-Automobiles" aria-hidden="true"></i>Vehicles</a>
+          <a href="/Education" title="Business ads" class="list-group-item"><i class="fa fa-fw fa-Business" aria-hidden="true"></i>Education</a>
+          <a href="/Import" title="Electronics ads" class="list-group-item"><i class="fa fa-fw fa-Electronics" aria-hidden="true"></i>Import </a>
+          <a href="/Export" title="Employment ads" class="list-group-item"><i class="fa fa-fw fa-Employment" aria-hidden="true"></i>Export </a>
           <div align="center" class="left-add">
           </div>
           </div>
